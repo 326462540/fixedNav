@@ -1,0 +1,288 @@
+﻿/*公共样式*/
+body{
+	margin:0;
+	padding:0;
+	font:14px "microsoft yahei";
+
+}
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p{
+	padding:0;
+	margin:0;
+}
+ul,li,ol,dl,dt,dd{
+	list-style:none;
+}
+.lf{
+	float:left;
+}
+.rt{
+	float:right;
+}
+.hide{
+	display: none;
+}
+a,a:focus,a:active,a:hover,a:link{
+	text-decoration:none!important;
+}
+img{
+	vertical-align: bottom;
+}
+i,em{
+	font-style:normal;
+}
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+.container1 {
+	max-width: 1120px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+
+/*@media (min-width: 1200px) {*/
+	/*.container {*/
+		/*width: 1200px;*/
+	/*}*/
+/*}*/
+.overflow{
+	overflow:hidden;
+}
+.en{
+	font-family: Arial;
+}
+.song {
+	font-family: 宋体;
+}
+
+.link{
+	display:block;
+	width:100%;
+	height:100%;
+}
+.clearfloat:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.padding_img {
+	width: 100%;
+	padding-top: 100%;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+.padding_img>img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: auto;
+	max-height: 100%!important;
+	max-width: 100%;
+	margin: auto!important;
+	vertical-align: middle;
+	box-sizing: border-box;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s ;
+	-ms-transition: all 0.5s ;
+	-o-transition: all 0.5s ;
+	transition: all 0.5s ;
+}
+.BMapLabel{border:1px solid #3c3c3c!important;max-width: inherit;background-color:#fff!important;color:#333!important;}
+input{
+	outline: none;
+	background: none;
+	border: 0;
+}
+.nav-container{
+	display: none;
+}
+.mbanner,.footer .f2{
+	display: none;
+}
+.footer .f2{
+	line-height: 22px;
+}
+.nav-container{display:none;background: #AADB00;border-top: 1px solid #EDF0EE;
+	position: fixed!important;
+	bottom: 0;
+	left: 0;}
+.nav-container .swiper-slide{}
+.nav-container .swiper-slide a{display: block;text-align: center;font-size: 16px;color:#fff;padding: 15px 0;}
+.nav-container .swiper-slide a.cur{color:#444;}
+@media (max-width: 767px) {
+	.mbanner,.nav-container,.footer .f2,.nav-container{
+		display: block;
+	}
+	.footer .f1,.nav{
+		display: none;
+	}
+
+	.commend1 {
+		display: none;
+	}
+	.commendmobile{
+		display: block!important;
+	}
+}
+/*推荐专用*/
+.ad-gallery .ad-image-wrapper .ad-image .ad-image-description span {
+	display: block;
+	height: 96px;
+	overflow: auto;
+}
+.commendmobile{
+	display: none;
+}
+.honor_k {
+	border: 1px solid #86C500;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	/*padding: 3px;*/
+	overflow: hidden;
+}
+.caption {
+	background: #86C500;
+	padding: 4px 0;
+	margin-bottom: 25px;
+}
+.caption h4 {
+	line-height: 22px;
+	height: 22px;
+	color: #fff;
+	font-size: 14px;
+	white-space: nowrap;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+/*推荐结束*/
+
+.nyproductcen .imgbox{
+	width:50%;
+	margin: 0 auto;
+}
+.nyproductcen .imgbox .padding_img{
+	padding-top: 100%;
+}
+
+.nyproductcen .name {
+	padding: 3px 0;
+	text-align: center;
+	color: #fff;
+	background-color: #7700B4;
+	margin: 10px 0;
+}
+/*返回按钮*/
+.back {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.back > a {
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	line-height: 28px;
+	text-align: center;
+	border-radius: 3px;
+	border: 1px solid #191919;
+	color: #191919;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.back > a:hover {
+	background-color: #7700B4;
+	border-color: #7700B4;
+	color: #fff;
+}
+
+/*新闻列表*/
+.nytech li{
+	border-bottom: 1px dashed #ddd;
+	padding: 10px 0;
+}
+.nytech li>a{
+	color: #191919;
+}
+.nytech li .name span{
+	display: inline-block;
+	width: 90%;
+	white-space: nowrap;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	vertical-align: middle;
+}
+.nytech li .name i{
+	display: inline-block;
+	width:10%;
+	text-align: right;
+	vertical-align: middle;
+}
+.nytech li .info{
+	margin: 10px 0;
+	height: 48px;
+	line-height: 24px;
+	overflow: hidden;
+}
+.nytech li .read{
+	text-align: right;
+}
+.nytech li .read a{
+	color: #7700B4;
+}
+.nytech li:hover a{
+	color: #7700B4;
+}
+.nytech li .read a:hover{
+	margin-right: 5px;
+}
+
+/*新闻年详情页*/
+/*新闻详情页+技术详情页*/
+.news_detail > h1, .news_detail > h3 {
+	text-align: center;
+}
+
+.news_detail > h1 {
+	font-size: 24px;
+	color: #000;
+}
+
+.news_detail > h3 {
+	font-size: 16px;
+	margin: 15px 0;
+	color: #adaaa2;
+}
+.news_detail hr{
+	margin: 15px 0;
+	border-top: 1px solid #ddd;
+}
+.news_detail img {
+	display: block;
+	max-width: 100%;
+	margin: 15px auto;
+}
+
+
+
+
+
+

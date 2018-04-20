@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>吸顶效果</title>
+		<link rel="stylesheet" href="common.css" />
+		<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+		<style>
+			.top ul{
+				overflow: hidden;	
+			}
+			.fixed{
+				position: fixed;
+				top:0;
+				left:0;
+				width: 100%;
+			}
+			.top li{
+				float: left;
+				width: 25%;
+				height: 50px;
+				background: #ddd;
+				text-align: center;
+				line-height: 50px;
+				border:1px solid #000;
+			}
+			.top li.cur{
+				background: #98E165;
+			}
+			.main>div{
+				height: 700px;
+				background: #666;
+				color:#fff;
+				font-size: 24px;text-align: center;
+				padding-top: 30px;
+				border-bottom: 1px solid #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div style='height:250px;'></div>
+		<div class="top">
+			<ul>
+				<li>第一区域</li>
+				<li>第二区域</li>
+				<li>第三区域</li>
+				<li>第四区域</li>
+			</ul>
+		</div>
+		<div class="main">
+			<div>一号区域主体</div>
+			<div>二号区域主体</div>
+			<div>三号区域主体</div>
+			<div>四号区域主体</div>
+		</div>
+		<script>
+			var offsetH=$('.top').offset().top;
+			var aTop = [];
+		    $(".main>div").each(function () {
+		        var top = $(this).offset().top - $(".top").height();
+		        aTop.push(top);
+		    });
+			$(window).scroll(function(){
+				var scrollH=$(window).scrollTop();
+				if(scrollH>offsetH){
+					$('.top').addClass('fixed');
+					$('.main').css('margin-top','50px');
+				}else{
+					$('.top').removeClass('fixed');
+					$('.main').css('margin-top','0');
+					$(".top li").eq(0).removeClass('cur');
+				}
+				for(var i=0;i<aTop.length;i++){
+					if (scrollH >= aTop[i]) {
+				       $(".top li").eq(i).addClass("cur").siblings().removeClass('cur');
+				    }
+				}
+			});
+		</script>
+	</body>
+</html>
